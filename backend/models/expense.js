@@ -4,6 +4,11 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.DECIMAL(10, 2),
         allowNull: false
       },
+      account: {
+        type: DataTypes.STRING,
+        allowNull: false
+      }
+      ,
       category: {
         type: DataTypes.STRING,
         allowNull: false
@@ -15,6 +20,10 @@ module.exports = (sequelize, DataTypes) => {
       date: {
         type: DataTypes.DATE,
         allowNull: false
+      },
+      exclude: {
+        type: DataTypes.BOOLEAN,
+        allowNull: false, 
       }
     });
   
