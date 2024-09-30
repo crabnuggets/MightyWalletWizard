@@ -1,0 +1,16 @@
+@startuml HighLevelArchitecture
+package "Frontend" {
+  [Mobile App]
+  [Web App]
+}
+
+package "Backend" {
+  [API Server]
+  [Database]
+}
+
+[Mobile App] --> [API Server] : HTTP/HTTPS
+[Web App] --> [API Server] : HTTP/HTTPS
+[API Server] --> [Database] : SQL Queries
+[API Server] --> "Authentication Service" : OAuth / Token-based Auth
+@enduml
